@@ -8,7 +8,15 @@ const Job = () => {
   const { id } = router.query;
 
   // Find the job with the matching id
-  const jobData = id ? jobs.find((job) => job.id == id) : {};
+  const jobData = id
+    ? jobs.find((job) => job.id == id)
+    : {
+        id: "",
+        title: "",
+        description: "",
+        payment: { min: 0, max: 0 },
+        skills: [],
+      };
   console.log(jobData);
 
   // Return the JobCardFull component with the jobData props if jobData is not empty

@@ -18,7 +18,7 @@ const ProfileCard = () => {
   return (
     <Card maxW="md">
       <CardHeader>
-        <Flex spacing="4">
+        <Flex>
           <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
             <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
 
