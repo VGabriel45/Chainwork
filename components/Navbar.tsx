@@ -20,6 +20,14 @@ const Navbar = () => {
           <BreadcrumbItem>
             <BreadcrumbLink href="/profile">Profile</BreadcrumbLink>
           </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/login">Login</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/register">Register</BreadcrumbLink>
+          </BreadcrumbItem>
         </Breadcrumb>
       </Center>
     </Box>
