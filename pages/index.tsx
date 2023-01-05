@@ -1,14 +1,17 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import { Box } from "@chakra-ui/react";
-import JobCard from "../components/JobCard";
+import JobCard from "../components/Cards/JobCard";
 import jobs from "../static/mockData/jobs.json";
+import { useEffect } from "react";
+import cookie from "js-cookie";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  useEffect(() => {
+    const cookies = cookie.get("accessToken");
+    console.log(cookies);
+  }, []);
   return (
     <Box>
       {jobs.map((data) => (

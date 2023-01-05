@@ -11,7 +11,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React from "react";
-import { JobCardProps } from "../interfaces/propTypes/JobCardProps";
+import { JobCardProps } from "../../interfaces/propTypes/JobCardProps";
 
 const JobCard = ({ id, title, description, payment, skills }: JobCardProps) => {
   return (

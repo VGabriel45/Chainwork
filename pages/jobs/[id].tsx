@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import JobCardFull from "../../components/JobCardFull";
+import JobCardFull from "../../components/Cards/JobCardFull";
 import ProposalBox from "../../components/ProposalBox";
 import jobs from "../../static/mockData/jobs.json";
 
