@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import {
@@ -12,14 +12,30 @@ import {
 } from "@chakra-ui/react";
 import { useMutation } from "@apollo/client";
 import { SIGN_IN } from "../../graphql/user/mutations/userMutations";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import { useToast } from "@chakra-ui/react";
 import setAuthCookies from "../../utils/setAuthCookies";
+import Cookies from "js-cookie";
+import { verifyAccessToken, verifyRefreshToken } from "../../utils/checkAuth";
 
 const LoginForm = () => {
   const [signIn, { loading, error, data }] = useMutation(SIGN_IN);
   const router = useRouter();
   const toast = useToast();
+
+  // useEffect(() => {
+  //   const checkCookies = async () => {
+  //     try {
+  //       await verifyRefreshToken(Cookies.get("refreshToken")!);
+  //       router.push("/");
+  //     } catch (error) {
+  //       console.log("delete cookies");
+  //       Cookies.remove("accessToken");
+  //       Cookies.remove("refreshToken");
+  //     }
+  //   };
+  //   checkCookies();
+  // }, []);
 
   return (
     <Formik
@@ -57,7 +73,7 @@ const LoginForm = () => {
         }).then(({ data }) => {
           if (!error) {
             setAuthCookies(data?.signIn.accessToken, data?.signIn.refreshToken);
-            // router.push("/");
+            router.push("/");
           }
         });
         setSubmitting(false);

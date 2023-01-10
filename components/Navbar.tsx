@@ -5,7 +5,6 @@ import {
   BreadcrumbLink,
   Center,
 } from "@chakra-ui/react";
-import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 
 const Navbar = () => {

@@ -16,7 +16,9 @@ specifiers:
   formik: ^2.2.9
   framer-motion: ^6.5.1
   graphql: ^16.6.0
+  jose: ^4.11.2
   js-cookie: ^3.0.1
+  jwt-decode: ^3.1.2
   next: 13.0.7
   react: 18.2.0
   react-dom: 18.2.0
@@ -39,7 +41,9 @@ dependencies:
   formik: 2.2.9_react@18.2.0
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
   graphql: 16.6.0
+  jose: 4.11.2
   js-cookie: 3.0.1
+  jwt-decode: 3.1.2
   next: 13.0.7_672uxklweod7ene3nqtsh262ca
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -3150,6 +3154,10 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: false
 
+  /jose/4.11.2:
+    resolution: {integrity: sha512-njj0VL2TsIxCtgzhO+9RRobBvws4oYyCM8TpvoUQwl/MbIM3NFJRR9+e6x0sS5xXaP1t6OCBkaBME98OV9zU5A==}
+    dev: false
+
   /js-cookie/3.0.1:
     resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==}
     engines: {node: '>=12'}
@@ -3207,6 +3215,10 @@ packages:
     dependencies:
       array-includes: 3.1.6
       object.assign: 4.1.4
+    dev: false
+
+  /jwt-decode/3.1.2:
+    resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==}
     dev: false
 
   /language-subtag-registry/0.3.22:
